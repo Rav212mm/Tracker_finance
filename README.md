@@ -1,6 +1,6 @@
-# mBank Expense Tracker
+# Expense Tracker
 
-Desktopowa aplikacja do analizy wydatków na podstawie wyciągów CSV z mBanku.
+Desktopowa aplikacja do analizy wydatków na podstawie wyciągów CSV.
 
 ## Funkcje
 
