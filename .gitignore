@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# Baza danych z danymi finansowymi – nie trafia do repo
+~/.expense_tracker/
+*.db
+
+# Pliki CSV z danymi bankowymi
+*.csv
