@@ -3,6 +3,11 @@ MAIN_STYLE = """
 QWidget {
     font-family: "Segoe UI", Arial, sans-serif;
     font-size: 13px;
+    color: #1A202C;
+}
+
+QLabel {
+    color: #1A202C;
 }
 
 QMainWindow, QWidget#content_area {
@@ -21,7 +26,7 @@ QLabel#app_title {
 }
 
 QLabel#app_subtitle {
-    color: #8BA3C7;
+    color: #B8D0F0;
     font-size: 11px;
 }
 
@@ -73,6 +78,7 @@ QComboBox {
     border: 1px solid #CBD5E0;
     border-radius: 6px;
     background-color: #FFFFFF;
+    color: #1A202C;
     min-width: 160px;
 }
 
@@ -88,6 +94,8 @@ QComboBox::drop-down {
 QComboBox QAbstractItemView {
     border: 1px solid #CBD5E0;
     border-radius: 4px;
+    background-color: #FFFFFF;
+    color: #1A202C;
     selection-background-color: #EBF4FF;
     selection-color: #1C2B4A;
 }
@@ -134,6 +142,7 @@ QLineEdit {
     border: 1px solid #CBD5E0;
     border-radius: 6px;
     background-color: #FFFFFF;
+    color: #1A202C;
 }
 
 QLineEdit:focus {
@@ -151,6 +160,7 @@ QTableWidget {
 
 QTableWidget::item {
     padding: 7px 10px;
+    color: #1A202C;
 }
 
 QTableWidget::item:selected {

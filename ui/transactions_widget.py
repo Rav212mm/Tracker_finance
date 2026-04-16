@@ -106,7 +106,7 @@ class TransactionsWidget(QWidget):
 
         # ── Footer ────────────────────────────────────────────────
         self.footer = QLabel("Transakcji: 0   |   Suma wydatków: 0,00 zł")
-        self.footer.setStyleSheet("color: #718096; font-size: 12px;")
+        self.footer.setStyleSheet("color: #4A5568; font-size: 12px;")
         lay.addWidget(self.footer)
 
     # ── Public API ─────────────────────────────────────────────────────────────

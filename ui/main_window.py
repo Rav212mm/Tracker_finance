@@ -103,7 +103,7 @@ class MainWindow(QMainWindow):
         vbox.addStretch()
 
         version_lbl = QLabel("v1.0")
-        version_lbl.setStyleSheet("color: #4A6A9A; padding: 10px; font-size: 11px;")
+        version_lbl.setStyleSheet("color: #A8C4E8; padding: 10px; font-size: 11px;")
         version_lbl.setAlignment(Qt.AlignmentFlag.AlignCenter)
         vbox.addWidget(version_lbl)
 

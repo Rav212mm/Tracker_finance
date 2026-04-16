@@ -62,7 +62,7 @@ class SummaryCard(QFrame):
         vbox.setSpacing(4)
 
         self._label = QLabel(label)
-        self._label.setStyleSheet("color: #718096; font-size: 12px;")
+        self._label.setStyleSheet("color: #4A5568; font-size: 12px;")
 
         self._value = QLabel(value)
         self._value.setFont(QFont("Segoe UI", 20, QFont.Weight.Bold))
@@ -106,7 +106,7 @@ class InsightRow(QFrame):
         hbox.setContentsMargins(10, 8, 10, 8)
         hbox.setSpacing(8)
 
-        dot_color = "#FC8181" if ctype == "discretionary" else "#F6AD55"
+        dot_color = "#C53030" if ctype == "discretionary" else "#92400E"
         dot = QLabel("●")
         dot.setStyleSheet(f"color: {dot_color}; font-size: 14px;")
         dot.setFixedWidth(18)
@@ -117,7 +117,7 @@ class InsightRow(QFrame):
 
         amt_lbl = QLabel(fmt_pln(total))
         amt_lbl.setFont(QFont("Segoe UI", 11, QFont.Weight.Bold))
-        amt_lbl.setStyleSheet("color: #E53E3E;")
+        amt_lbl.setStyleSheet("color: #C53030;")
 
         hbox.addWidget(dot)
         hbox.addWidget(cat_lbl)
@@ -125,11 +125,11 @@ class InsightRow(QFrame):
 
         if trend_pct is not None:
             if trend_pct > 5:
-                txt, col = f"↑{trend_pct:.0f}%", "#E53E3E"
+                txt, col = f"↑{trend_pct:.0f}%", "#C53030"
             elif trend_pct < -5:
-                txt, col = f"↓{abs(trend_pct):.0f}%", "#38A169"
+                txt, col = f"↓{abs(trend_pct):.0f}%", "#276749"
             else:
-                txt, col = "→", "#A0AEC0"
+                txt, col = "→", "#4A5568"
             trend_lbl = QLabel(txt)
             trend_lbl.setStyleSheet(f"color: {col}; font-size: 11px; font-weight: bold;")
             trend_lbl.setFixedWidth(44)
@@ -169,7 +169,7 @@ class DashboardWidget(QWidget):
         hdr.addStretch()
 
         period_lbl = QLabel("Okres:")
-        period_lbl.setStyleSheet("color: #4A5568;")
+        period_lbl.setStyleSheet("color: #2D3748;")
         self.month_combo = QComboBox()
         self.month_combo.setMinimumWidth(180)
         self.month_combo.currentIndexChanged.connect(lambda: self.refresh(update_months=False))
@@ -219,7 +219,7 @@ class DashboardWidget(QWidget):
         ins_title = QLabel("🎯 Gdzie możesz zaoszczędzić")
         ins_title.setObjectName("card_section_title")
         ins_hint = QLabel("Wydatki uznaniowe i optymalizowalne")
-        ins_hint.setStyleSheet("color: #A0AEC0; font-size: 11px;")
+        ins_hint.setStyleSheet("color: #4A5568; font-size: 11px;")
 
         ins_vbox.addWidget(ins_title)
         ins_vbox.addWidget(ins_hint)
@@ -366,7 +366,7 @@ class DashboardWidget(QWidget):
 
         if not insights:
             lbl = QLabel("Brak danych.\nZaimportuj plik CSV.")
-            lbl.setStyleSheet("color: #A0AEC0; padding: 20px;")
+            lbl.setStyleSheet("color: #4A5568; padding: 20px;")
             lbl.setAlignment(Qt.AlignmentFlag.AlignCenter)
             self.ins_layout.addWidget(lbl)
             self.ins_layout.addStretch()
@@ -377,11 +377,11 @@ class DashboardWidget(QWidget):
 
         summary = QLabel(
             f"Suma wydatków do redukcji: <b>{fmt_pln(total)}</b><br>"
-            f"Potencjalna oszczędność (−20%): <b style='color:#38A169'>{fmt_pln(potential)}</b>"
+            f"Potencjalna oszczędność (−20%): <b style='color:#276749'>{fmt_pln(potential)}</b>"
         )
         summary.setTextFormat(Qt.TextFormat.RichText)
         summary.setStyleSheet(
-            "background:#F0FFF4; color:#276749; padding:10px; "
+            "background:#C6F6D5; color:#1C4532; padding:10px; "
             "border-radius:6px; font-size:12px;"
         )
         summary.setWordWrap(True)

@@ -33,7 +33,7 @@ class DropZone(QFrame):
 
         hint = QLabel("Przeciągnij plik CSV z mBanku tutaj\nlub kliknij przycisk poniżej")
         hint.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        hint.setStyleSheet("color: #718096; font-size: 14px; background: transparent;")
+        hint.setStyleSheet("color: #2D3748; font-size: 14px; background: transparent;")
 
         lay.addWidget(icon)
         lay.addWidget(hint)
